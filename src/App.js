@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Routes, Redirect } from "react-router-dom";
 import Docs from "./components/Docs";
 import Tutorials from "./components/Tutorials";
 import Community from "./components/Community";
@@ -11,21 +11,19 @@ function App() {
     <>
       <Menu />
 
-      <Switch>
-        <Route exact path="/">
+      <Routes>
+        {/* <Route exact path="/">
           <Redirect to="/docs" />
-        </Route>
+        </Route> */}
 
-        <Route exact path="/docs" component={Docs} />
+        <Route path="/" element={<Docs />} />
 
-        <Route path="/tutorial">
-          <Tutorials />
-        </Route>
+        <Route path="/tutorial" element={<Tutorials />} />
 
-        <Route path="/community" render={() => <Community />} />
+        <Route path="/community" element={<Community />} />
 
-        <Route component={ErrorPage} />
-      </Switch>
+        {/* <Route element={ErrorPage} /> */}
+      </Routes>
     </>
   );
 }
