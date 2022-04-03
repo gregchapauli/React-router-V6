@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Menu() {
   return (
@@ -21,13 +21,19 @@ function Menu() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/">Docs</Link>
+            <NavLink className="nav-link" to="/">
+              Docs
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/tutorial">Tutorial</Link>
+            <NavLink className="nav-link" to="/tutorial">
+              Tutorial
+            </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/community">Community</NavLink>
+            <NavLink className="nav-link" to="/community">
+              Community
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -35,4 +41,4 @@ function Menu() {
   );
 }
 
-export default Menu
+export default Menu;
