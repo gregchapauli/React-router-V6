@@ -13,14 +13,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Navigate to="/docs" replace />} />
-
         <Route path="/docs" element={<Docs />} />
-
         <Route path="/tutorial" element={<Tutorials />} />
-
         <Route path="/community" element={<Community />} />
 
-        {/* <Route element={ErrorPage} /> */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );
