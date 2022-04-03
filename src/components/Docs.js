@@ -7,7 +7,10 @@ function Docs() {
   return (
     <div className="container">
       <h1>Getting Started</h1>
-      <button className="btn btn-primary" onClick={() => navigate("/tutorial")}>
+      <button
+        className="btn btn-primary"
+        onClick={() => navigate("/tutorial", { replace: true })}
+      >
         Vers Tutorial
       </button>
     </div>
